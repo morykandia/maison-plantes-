@@ -1,0 +1,22 @@
+nav div {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    border-bottom: solid 3px black;
+    background-color: #808000;
+}
+
+nav li {
+    list-style-type: none ;
+    float: left;
+}
+
+nav a{
+    display:block;               
+    color: black;
+  	text-align: center;
+  	padding: 10px;
+  	text-decoration: none;  
+}

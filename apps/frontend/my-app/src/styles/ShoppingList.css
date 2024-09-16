@@ -1,0 +1,23 @@
+.menu {
+    display: flex;
+	margin-top: -1%;           
+    padding:0;                  
+    background-color: #808000;     
+	border-top: solid 3px black;
+}
+
+.menu li {
+    list-style-type: none ;
+	float: left;       
+
+}
+
+.menu h3 {
+    display:block;               
+    color: black;
+  	text-align: center;
+  	padding: 16px;
+  	text-decoration: none;        
+	
+}	
+
