@@ -1,5 +1,5 @@
 import {useState,  useEffect } from "react";
-
+//import '../styles/ProductsList.css'
 interface Products{
     id:number 
     categorie : string ,
@@ -23,9 +23,9 @@ useEffect(() => {
   console.log(data)
     return (
         <div>
-            <ul>
+            <ul >
             { data.map(({id,name, price, image} ) => ( 
-                <li key={id}>
+                <li key={id} >
                     <h3>{name}</h3>
                     <h3>{price}</h3>
                     <img src={image} />
