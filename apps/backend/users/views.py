@@ -27,6 +27,13 @@ class RetrieveUserView(APIView):
         user = request.user
         user = UserAcountSerializer(user)
         return Response(user.data, status=status.HTTP_200_OK)
+
+
+class logout_user(APIView):
+    def post(self, request):
+        if request.method == "POST":
+            request.user.auth_token.delete()
+            return Response({"Message": "You are logged out"}, status=status.HTTP_200_OK)    
     
 
 class UserAccountAPIView(APIView):

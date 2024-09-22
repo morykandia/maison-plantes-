@@ -33,14 +33,9 @@ SECRET_KEY = config(
 #DEBUG = True
 DEBUG = config('DJANGO_DEBUG', cast=bool, default=False)
 
-ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1"]
-CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 
-CORS_ALLOWED_WHITELIST = [
-    "http://localhost:5173",                                                                                                                                                     
-]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -183,3 +178,31 @@ SIMPLE_JWT = {
 
 
 AUTH_USER_MODEL = 'users.UserAccount'
+
+ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1"]
+CORS_ORIGIN_ALLOW_ALL = True
+
+
+CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+
+CORS_ALLOWED_WHITELIST = [
+    "http://localhost:5173", 
+    "http://localhost:86",                                                                                                                                                  
+]
+
+
+
+CORS_ALLOW_CREDENTIALS = True
+"""
+CORS_ALLOW_HEADERS = [
+        'accept',
+        'accept-encoding',
+        'authorization',
+        'content-type',
+        'dnt',
+        'origin',
+        'user-agent',
+        'x-csrftoken',
+        'x-requested-with',
+]
+"""
